@@ -4,5 +4,5 @@ If you are planning on using this template, you should proceed with the followin
 
 1. Make a **private** fork of this repository https://bitbucket.org/allegrotech/github-repositories/fork
 2. Create a new branch and use it to commit your solution.
-3. Create a pull request from your solution branch to master branch of your repository.
-4. Grant us a write access to your repository. You can find detailed instructions for this step in the recruitment task.
+3. Create a pull request from your solution branch to master branch of *your repository*.
+4. Grant us a read access to your repository. You can find detailed instructions for this step in the PDF with instructions that you received.

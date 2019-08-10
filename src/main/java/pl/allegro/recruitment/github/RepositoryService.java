@@ -14,8 +14,8 @@ public class RepositoryService {
         RepositoryResponse repositoryResponse;
         try {
             repositoryResponse = githubClient.getRepositoryDetails(owner, repositoryName);
-        } catch (FeignException.NotFound e) {
-            return ResponseEntity.notFound().build();
+        } catch (FeignException e) {
+            return ResponseEntity.status(e.status()).build();
         }
         return ResponseEntity.ok(repositoryResponse);
     }

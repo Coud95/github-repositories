@@ -1,6 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.6.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -10,10 +10,22 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile("org.springframework.cloud:spring-cloud-starter-openfeign")
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    testCompile("org.assertj:assertj-core:3.11.1")
+    repositories { jcenter() }
+    dependencies { testCompile "org.mockito:mockito-core:2.+" }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-starter-parent:Greenwich.SR2"
+    }
 }
